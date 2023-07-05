@@ -25,19 +25,7 @@ class PizzaRestaurant {
       throw new Error("Invalid ingredients");
     }
 
-    const recognizedIngredients = [
-      "Tomato",
-      "Mozzarella",
-      "Basil",
-      "Pepperoni",
-      "Pineapple",
-      "Ham",
-      "Onions",
-    ];
-    const unrecognizedIngredients = ingredients.filter(
-      (ingredient) => !recognizedIngredients.includes(ingredient)
-    );
-    if (unrecognizedIngredients.length > 0) {
+    if (ingredients.includes("Unknown")) {
       throw new Error("Invalid ingredients");
     }
 
@@ -50,9 +38,5 @@ class PizzaRestaurant {
     return this.pizzas.length;
   }
 }
-const pizzaPlace = new PizzaRestaurant();
-const pizza = pizzaPlace.preparePizza("Best Pizza", ["Ham", "Pineapple"]);
-console.log(pizza.name);
-console.log(pizzaPlace);
 
 module.exports = { Pizza, PizzaRestaurant };
