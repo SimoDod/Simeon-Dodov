@@ -1,7 +1,7 @@
 class Pizza {
-  constructor(name, ingredients) {
+  constructor(name, ingridients) {
     this.name = name;
-    this.ingredients = ingredients;
+    this.ingridients = ingridients;
   }
 }
 
@@ -16,20 +16,20 @@ class PizzaRestaurant {
     );
   }
 
-  preparePizza(name, ingredients) {
+  preparePizza(name, ingridients) {
     if (this.hasPizza(name)) {
       throw new Error("Pizza name already exists");
     }
 
-    if (ingredients.length === 0) {
-      throw new Error("Invalid ingredients");
+    if (ingridients.length === 0) {
+      throw new Error("Invalid ingridients");
     }
 
-    if (ingredients.includes("Unknown")) {
-      throw new Error("Invalid ingredients");
+    if (ingridients.includes("Unknown")) {
+      throw new Error("Invalid ingridients");
     }
 
-    const pizza = new Pizza(name, ingredients);
+    const pizza = new Pizza(name, ingridients);
     this.pizzas.push(pizza);
     return pizza;
   }
