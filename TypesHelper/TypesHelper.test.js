@@ -1,4 +1,4 @@
-const TypesHelper = require("./TypesHelper.js");
+const TypesHelper = require("./typesHelper.js");
 const typesHelper = new TypesHelper();
 
 describe("TypesHelper class", () => {
