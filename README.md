@@ -1,5 +1,3 @@
-# Simeon-Dodov
-
 ## How to start
 
 npm i
